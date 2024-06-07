@@ -1,0 +1,54 @@
+{
+    "name": "ndinhbang/laravel-encrypter",
+    "description": "laravel-encrypter",
+    "keywords": [
+        "ndinhbang",
+        "laravel",
+        "encryption",
+        "laravel-encrypter"
+    ],
+    "homepage": "https://github.com/ndinhbang/laravel-encrypter",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Nguyen Dinh Bang",
+            "email": "ndinhbang111@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-sodium": "*",
+        "illuminate/encryption": "^11.0",
+        "ndinhbang/laravel-crypto": "^1.0",
+        "symfony/uid": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ndinhbang\\LaravelEncrypter\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ndinhbang\\LaravelEncrypter\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ndinhbang\\LaravelEncrypter\\EncrypterServiceProvider"
+            ]
+        }
+    }
+}
